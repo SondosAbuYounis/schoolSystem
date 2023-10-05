@@ -1,0 +1,26 @@
+$navFooterBgColor: #213555cc;
+$mainTextColor:#213555 ;
+$secondaryTextColor: #F0F0F0;
+$mainTextSize: 10%;
+$secondaryTextSize: 5%;
+$font :  Arial, Helvetica, sans-serif;
+
+.navBar{
+    display:flex;
+    flex-direction: row;
+    font-family: $font;
+    background-color:$navFooterBgColor ;
+    color: $secondaryTextColor ;
+    padding:2%;
+    row-gap: 50%;
+}
+
+.navItems{
+    justify-content:flex-end;
+}
+
+.item {
+    text-decoration: none;
+    color: $secondaryTextColor;
+    font-weight: lighter;
+}
