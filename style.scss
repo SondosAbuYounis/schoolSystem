@@ -1,0 +1,245 @@
+$navFooterBgColor: #213555cc;
+$clipBgColor: #21355597;
+$mainTextColor:#213555 ;
+$secondaryTextColor: #F0F0F0;
+$textWhite: white;
+$mainTextSize: 10%;
+$secondaryTextSize: 5%;
+$boldTextSize: 30px;
+$placeholderTxtSize: 12px;
+$txtHoverColor: #B4B4B3;
+$font :  Arial, Helvetica, sans-serif;
+
+.navBar{
+    font-family: $font;
+    background-color:$navFooterBgColor ;
+    color: $textWhite ;
+    position: fixed;
+    width: 100%;
+    top:0;
+    padding: 0.5%;
+    z-index: 2;
+}
+
+ul{
+    list-style-type: none;
+}
+li{
+    display: inline;
+}
+a{
+    text-decoration: none;
+    font-size: 15px;
+    margin-left: 100px;
+}
+
+
+
+.item {
+    text-decoration: none;
+    color: $secondaryTextColor;
+    font-weight: lighter;
+}
+.item:hover{
+    color: $txtHoverColor;
+}
+
+.formBox{
+    padding: 45px;
+    border-radius: 10px;
+    margin-right: 32.5%;
+    margin-left: 32.5%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width:35%;
+    border: 1px solid $navFooterBgColor;
+    color: $mainTextColor;
+}
+
+#formHeading{
+    color: $navFooterBgColor;
+    font-weight: bold;
+    text-align: center;
+    font-size: $boldTextSize;
+}
+
+input[type=submit]{
+    transform: translateX(180%) ;
+    background-color: $navFooterBgColor;
+    border: none;
+    color: $textWhite;
+    font-family: $font;
+    border-radius: 35px;
+    width: 100px;
+    height: 35px;
+}
+input[type=checkbox]{
+    margin-left: 80px;
+    margin-right: 10px;
+}
+input[class=gradeTxt], input[class=phoneTxt], input[class=dateTxt], input[class=fullNameTxt]{
+    border-radius: 35px;
+    height: 35px;
+    border-color: $navFooterBgColor;
+    border-width: 1px;
+    width: 280px;
+    color: $navFooterBgColor;
+    text-align: center;
+}
+
+label, input{
+    margin-left: 80px;
+    margin-right: 50px;
+}
+
+.bgContainer {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    top: 10%;
+    z-index: 1;
+
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    height: 600px;
+}
+
+.shadeOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $clipBgColor; /* Change the color and opacity as needed */
+}
+
+option[value=option1]{
+    background-color: $mainTextColor;
+    color: $textWhite;
+    font-family: $font;
+}
+table{
+    margin-left: 10%;
+    border-radius: 15px;
+
+}
+table, th, tr, td{
+    border-color: $mainTextColor;
+    border: 1px solid;
+    text-align: left;
+    padding: 1%;
+
+}
+th{
+    color: $textWhite;
+    font-family: $font;
+    width: 200px;
+    background-color: $navFooterBgColor;
+}
+tr:nth-child(odd){
+    background-color: $clipBgColor;
+    color: $textWhite;
+}
+tr:nth-child(even){
+    color: $navFooterBgColor;
+}
+
+.stdCard{
+    display: flex;
+    flex-direction: row;
+    margin: 10%;
+    font-size: 13px;
+    color: $navFooterBgColor;
+}
+
+.stdOne{
+    display: flex;
+    flex-direction: column;
+    column-gap: 20px;
+    border: 1px solid;
+    border-color: $mainTextColor;
+    border-radius: 80px;
+    width: 300px;
+    height: 500px;
+    padding: 50px;
+}
+
+.idPic{
+    margin-top: 25px;
+    margin-bottom: 35px;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    font-family: $font;
+    color: $secondaryTextColor;
+    height: 50%;
+    background-color: $navFooterBgColor;
+    width: 100%;
+    padding-top: 2%;
+}
+.copyRight{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+    font-size: 13px;
+    color: $secondaryTextColor;
+}
+.footerTxt {
+    font-family: $font;
+    color:$secondaryTextColor;
+    font-size: 10px;
+    text-align: start;
+    padding-left: 20%;
+}
+.logoFo{
+    font-size: 15px;
+    color:$secondaryTextColor;
+    text-align: start;
+    padding-left: 20%;
+}
+.reach{
+    font-family: $font;
+    color:$secondaryTextColor;
+    font-size: 15px;
+    text-align: start;
+    font-weight: bold;
+}
+
+.icon {
+    display: inline;
+    width: 25px;
+    height: 25px;
+}
+
+@media (min-width: 576px) {
+    :root {
+      --size-divisor: 2;
+    }
+  }
+  @media (min-width: 768px) {
+    :root {
+      --size-divisor: 1.5;
+    }
+  }
+  @media (min-width: 992px) {
+    :root {
+      --size-divisor: 1;
+    }
+  }
+  @media (min-width: 1200px) {
+    :root {
+      --size-divisor: .67;
+    }
+  }
+
+

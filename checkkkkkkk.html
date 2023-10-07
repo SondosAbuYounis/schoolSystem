@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Checkboxes as Radio Buttons</title>
+</head>
+<body>
+    <form>
+        <label>Choose one option:</label>
+        <input type="checkbox" name="option" value="option1"> Option 1
+        <input type="checkbox" name="option" value="option2"> Option 2
+        <input type="checkbox" name="option" value="option3"> Option 3
+    </form>
+
+    <script>
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                checkboxes.forEach(otherCheckbox => {
+                    if (otherCheckbox !== checkbox) {
+                        otherCheckbox.checked = false;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
