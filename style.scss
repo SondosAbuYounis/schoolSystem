@@ -6,7 +6,8 @@ $textWhite: white;
 $mainTextSize: 10%;
 $secondaryTextSize: 5%;
 $boldTextSize: 30px;
-$placeholderTxtSize: 12px;
+$boldTextSizeResp: 15px;
+$placeholderTxtSize:  12px;
 $txtHoverColor: #B4B4B3;
 $font :  Arial, Helvetica, sans-serif;
 
@@ -221,6 +222,107 @@ tr:nth-child(even){
     height: 25px;
 }
 
+@media (min-width: 200px) and (max-width: 1090px){
+        a{
+            font-size: 8px;
+            margin-left: 25px;
+        }
+        #formBox{
+            padding: 20px;
+            border-radius: 5px;
+            margin-right: 32.5%;
+            margin-left: 32.5%;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            width:400px;
+            size: 15px;
+        }
+        #formHeading{
+            font-size: $boldTextSizeResp;
+        }
+        input[type=submit]{
+            transform: translateX(45%) ;
+            width: 80px;
+            height: 25px;
+        }
+        input[type=checkbox]{
+            margin-left: 40px;
+            margin-right: 5px;
+        }
+        input[class=gradeTxt], input[class=phoneTxt], input[class=dateTxt], input[class=fullNameTxt]{
+            border-radius: 35px;
+            height: 15px;
+            width: 100px;
+        }
+        label, input{
+            margin-left: 40px;
+            margin-right: 25px;
+            font-size: 12px;
+        }
+        img {
+            max-width: cover;
+            height: 300px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        table{
+            margin-right: 1%;
+            margin-left: 20%; 
+        }
+        th{
+            width: 80px;
+            font-size: 17px;
+        }
+        td{
+            font-size: 15px;
+        }
+        .stdCard{
+            margin-right: 20%;
+            margin-left: 20%;
+        }
+        .stdOne{
+            width: 200px;
+            height: 300px;
+            border-radius: 60px;
+            padding: 25px;
+            font-size: 10px;
+        }
+        .idPic{
+            margin-top: 25px;
+            margin-bottom: 35px;
+            margin-left: 25px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+        }
+      }
+    @media (min-width: 200px) and (max-width: 360px){
+        :root {
+          --size-divisor: 2;
+        }
+      }
+      @media (min-width: 1090px) and (max-width: 1100px) {
+        #formBox{
+            padding: 45px;
+            border-radius: 10px;
+            margin-right: 32.5%;
+            margin-left: 32.5%;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            width:35%;
+        }
+        table{
+            margin-right: 1%;
+            margin-left: 30%; 
+        }
+        th{
+            width: 100px;
+            font-size: 17px;
+        }
+        td{
+            font-size: 15px;
+        }
+      }
 @media (min-width: 576px) {
     :root {
       --size-divisor: 2;
