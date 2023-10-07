@@ -14,39 +14,118 @@
 
 <!-- nav bar  -->
     <div class="navBar">
-            <div class="logo">101<b>School</b></div>
-            <div class="navItems">
-                <a class="item" href="">Home</a>
-                <a class="item" href="">About</a>
-                <a class="item" href="">Major Events</a>
-                <a class="item" href="">Profile</a>
-            </div>
+            <ul>
+                <li class="logo">101<b>School</b></li>
+                <li><a class="item" href="">Home</a></li>
+                <li><a class="item" href="">About</a></li>
+                <li><a class="item" href="">Major Events</a></li>
+                <li><a class="item" href="">Profile</a></li>
+            </ul>
     </div>
     
 <!-- Home -->
     <div class="home">
-        <!-- heroSection -->
-        <div></div>
-        <!-- Form -->
-        <form class="formA">
-            <label for="fullName">Enter your name:</label>
-            <input class="fullName">First Name, Middle Name, Sur Name</input>
-            <label for="">Date of birth:</label>
-            <input class="">00/00/0000</input>
-            <label for="">Enter your gender:</label>
-            <input class="">Male, Female</input>
-            <label for="">Phone Number:</label>
-            <input class="">+962 0 0000 0000</input>
-            <label for="">Enter your garde:</label>
-            <input class="">00th Grade</input>
+        
+<!-- heroSection -->
+        <div class="bgContainer">
+            <img src="/clips/homeBg2.JPG" alt="Image">
+            <div class="shadeOverlay"></div>
+        </div>
 
+<!-- Form -->
+        <div class="formBox">
+            <div id="formHeading">Register a student</div>
+            <br> <br>
+            <form class="formA">
+                <label for="fullNameTxt">Student full Name</label>
+                <input class="fullNameTxt" placeholder="First Name, Middle Name, Sur Name"></input>
+                <br><br>
+                <label for="dateTxt">Date of birth</label>
+                <input class="dateTxt" type="date"></input>
+                <br><br>
+                <label for="genderTxt">Gender</label>
+                <br>
+                    <input class="checkboxTxt" type="checkbox">Male</input>
+                    <input class="checkboxTxt" type="checkbox">Female</input>
+                <br><br>
+                <label for="phoneTxt">Phone Number</label>
+                <input class="phoneTxt" type="tel" placeholder="+962 0 0000 0000"></input>
+                <br><br>
+                <label for="gradeTxt">Garde</label>
+                <input class="gradeTxt" placeholder="00th Grade"></input>
+                <br><br>
+                <label for="majorTxt">Major</label>
+                <select id="majorTxt">
+                    <option value="option1">Administration</option>
+                    <option value="option2">IT</option>
+                    <option value="option3">Science</option>
+                    <option value="option4">Art</option>
+                </select>
+                <br><br>
+                <label for="idPic">Identification photograph</label>
+                <input type="file" name="idPic">
+                <br><br>
+                <input id="register" type="submit" value="Register">
+            </form>
         </div>
         <div class="table">
-            <!-- info from form  -->
+
+<!-- info from form  -->
+            <table >
+                <tr>
+                    <th>Name</th>
+                    <th>Date of birth</th>
+                    <th>Gender</th>
+                    <th>Garde</th>
+                    <th>Major</th>
+                    <th>Phone Number</th>
+                </tr>
+                <tr>
+                    <td>Samantha Addams</td>
+                    <td>10/10/2010</td>
+                    <td>Female</td>
+                    <td>8th Grade</td>
+                    <td>IT</td>
+                    <td>+962 0 0000 0000</td>
+                </tr>
+                <tr>
+                    <td>Caroline MacCovey</td>
+                    <td>23/11/2009</td>
+                    <td>Female</td>
+                    <td>9th Grade</td>
+                    <td>Art</td>
+                    <td>+962 0 0000 0000</td>
+                </tr>
+                
+            </table>
         </div>
     </div>
 
-    <div class="footer"></div>
+<!-- student card -->
+    <div class="stdCard">
+        <div class="stdOne">
+            <img class="idPic" rel="idPic" src="clips/homeBg.JPG"></a>
+            <div>name</div>
+            <div>gender</div>
+            <div>grade</div>
+        </div>
+    </div>
+
+<!-- footer -->
+    <div class="footer">
+        <div class="colummn1">
+            <div class="logoFo">101<b>School</b></div>
+            <div class="footerTxt">Let the kids reach the optimum!</div>
+        </div>
+        <div class="column2">
+            <div class="reach">Reach out!</div>
+            <img class="icon" src="clips/phoneFi.png"></a>
+            <img class="icon" src="clips/email3.png"></a>
+            <img class="icon" src="clips/linkedin3.png"></a>
+        </div>
+        <div class="copyRight"><hr> All credits to &#169; 101 School 2023</div>
+
+    </div>
 
 </body>
 </html>
