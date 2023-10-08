@@ -10,7 +10,7 @@
 <body>
 
 <!-- js file  -->
-    <script href="app.js"></script>
+    <script src="app.js"></script>
 
 <!-- nav bar  -->
     <div class="navBar">
@@ -28,7 +28,7 @@
         
 <!-- heroSection -->
         <div class="bgContainer">
-            <img src="clips/homeBg2.JPG" alt="Image">
+            <img src="/clips/homeBg2.JPG" alt="Image">
             <div class="shadeOverlay"></div>
         </div>
 
@@ -38,7 +38,7 @@
             <br> <br>
             <form class="formA">
                 <label for="fullNameTxt">Student full Name</label>
-                <input class="fullNameTxt" placeholder="First Name, Middle Name, Sur Name"></input>
+                <input id="fullNameTxt" placeholder="First Name, Middle Name, Sur Name"></input>
                 <br><br>
                 <label for="dateTxt">Date of birth</label>
                 <input class="dateTxt" type="date"></input>
@@ -55,23 +55,25 @@
                 <input class="gradeTxt" placeholder="00th Grade"></input>
                 <br><br>
                 <label for="majorTxt">Major</label>
-                <select id="majorTxt">
+
+                <input type="text" id="majorTxt" name="majorTxt"></input>
+                <!-- <select id="majorTxt">
                     <option value="option1">Administration</option>
                     <option value="option2">IT</option>
                     <option value="option3">Science</option>
                     <option value="option4">Art</option>
-                </select>
+                </select> -->
                 <br><br>
                 <label for="idPic">Identification photograph</label>
                 <input type="file" name="idPic">
                 <br><br>
-                <input id="register" type="submit" value="Register">
+                <input id="register" type="submit" value="Register" onclick="stdClick(event)">
             </form>
         </div>
         <div class="table">
 
 <!-- info from form  -->
-            <table >
+            <table id="stdTable">
                 <tr>
                     <th>Name</th>
                     <th>Date of birth</th>
