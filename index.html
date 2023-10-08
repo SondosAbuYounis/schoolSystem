@@ -38,36 +38,38 @@
             <br> <br>
             <form class="formA">
                 <label for="fullNameTxt">Student full Name</label>
-                <input id="fullNameTxt" placeholder="First Name, Middle Name, Sur Name"></input>
+                <input class="fullNameTxt" name="Full Name" placeholder="First Name, Middle Name, Sur Name"></input>
                 <br><br>
                 <label for="dateTxt">Date of birth</label>
-                <input class="dateTxt" type="date"></input>
+                <input class="dateTxt" name="Date of Birth" type="date"></input>
                 <br><br>
-                <label for="genderTxt">Gender</label>
+                <label for="genderTxt" name="Gender">Gender</label>
                 <br>
-                    <input class="checkboxTxt" type="checkbox">Male</input>
-                    <input class="checkboxTxt" type="checkbox">Female</input>
+                    <input class="checkboxTxt" name="checkboxTxtNa" type="checkbox">Male</input>
+                    <input class="checkboxTxt" name="checkboxTxtNa"type="checkbox">Female</input>
                 <br><br>
                 <label for="phoneTxt">Phone Number</label>
-                <input class="phoneTxt" type="tel" placeholder="+962 0 0000 0000"></input>
+                <input class="phoneTxt" name="Phone Number"type="tel" placeholder="+962 0 0000 0000"></input>
                 <br><br>
-                <label for="gradeTxt">Garde</label>
-                <input class="gradeTxt" placeholder="00th Grade"></input>
+                <label for="gradeTxt">Grade</label>
+                <input class="gradeTxt" name="Grade" placeholder="00th Grade"></input>
                 <br><br>
                 <label for="majorTxt">Major</label>
 
-                <input type="text" id="majorTxt" name="majorTxt"></input>
-                <!-- <select id="majorTxt">
+                <!-- <input type="text" id="majorTxt" name="majorTxt"></input> -->
+                <select id="majorTxt" name="Major">
                     <option value="option1">Administration</option>
                     <option value="option2">IT</option>
                     <option value="option3">Science</option>
                     <option value="option4">Art</option>
-                </select> -->
+                </select>
                 <br><br>
                 <label for="idPic">Identification photograph</label>
-                <input type="file" name="idPic">
+                <input type="file" name="Identification Picture">
                 <br><br>
                 <input id="register" type="submit" value="Register" onclick="stdClick(event)">
+                <br>
+                <input id="stdInfoPg" type="submit" value="stdInfoPg" onclick="stdInfoClick(event2)">
             </form>
         </div>
         <div class="table">
@@ -104,7 +106,7 @@
     </div>
 
 <!-- student card -->
-    <div class="stdCard">
+    <div id="stdCard">
         <div class="stdOne">
             <img class="idPic" rel="idPic" src="clips/homeBg.JPG"></a>
             <div>name</div>
