@@ -16,101 +16,120 @@
         // append child tr              
 
 
-const form = document.querySelector('#formA');
-// const table = document.getElementById('stdTable');
+// const form = document.querySelector('#formA');
+// // const table = document.getElementById('stdTable');
 
-var regBtn = document.getElementById('register');
+// var regBtn = document.getElementById('register');
 
-// added inline onclick function and called in here
-function stdClick(event) {
-  // Prevent the default form submission behavior
-event.preventDefault();
+// // added inline onclick function and called in here
+// function stdClick(event) {
+//   // Prevent the default form submission behavior
+// event.preventDefault();
 
-  // Get the values from the form fields
-  const fullName = document.querySelector('.fullNameTxt').value;
-  const dateOfBirth = document.querySelector('.dateTxt').value;
-  const gender = document.querySelector('.checkboxTxt:checked').value;
-  const phoneNumber = document.querySelector('.phoneTxt').value;
-  const grade = document.querySelector('.gradeTxt').value;
-  const major = document.querySelector('#majorTxt').value;
+//   // Get the values from the form fields
+//   const fullName = document.querySelector('.fullNameTxt').value;
+//   const dateOfBirth = document.querySelector('.dateTxt').value;
+//   const gender = document.querySelector('.checkboxTxt:checked').value;
+//   const phoneNumber = document.querySelector('.phoneTxt').value;
+//   const grade = document.querySelector('.gradeTxt').value;
+//   const major = document.querySelector('#majorTxt').value;
 
-  // Create new table cells for each value
-  const fullNameCell = document.createElement('td');
-  fullNameCell.textContent = fullName;
-  fullNameCell.id="stdTableID";
+//   // Create new table cells for each value
+//   const fullNameCell = document.createElement('td');
+//   fullNameCell.textContent = fullName;
+//   fullNameCell.id="stdTableID";
 
-  const dateOfBirthCell = document.createElement('td');
-  dateOfBirthCell.textContent = dateOfBirth;
-  dateOfBirthCell.id="stdTableID";
+//   const dateOfBirthCell = document.createElement('td');
+//   dateOfBirthCell.textContent = dateOfBirth;
+//   dateOfBirthCell.id="stdTableID";
 
-  const genderCell = document.createElement('td');
-  genderCell.textContent = gender;
-  genderCell.id="stdTableID";
+//   const genderCell = document.createElement('td');
+//   genderCell.textContent = gender;
+//   genderCell.id="stdTableID";
 
-  const phoneNumberCell = document.createElement('td');
-  phoneNumberCell.textContent = phoneNumber;
-  phoneNumberCell.id="stdTableID";
+//   const phoneNumberCell = document.createElement('td');
+//   phoneNumberCell.textContent = phoneNumber;
+//   phoneNumberCell.id="stdTableID";
 
-  const gradeCell = document.createElement('td');
-  gradeCell.textContent = grade;
-  gradeCell.id="stdTableID";
+//   const gradeCell = document.createElement('td');
+//   gradeCell.textContent = grade;
+//   gradeCell.id="stdTableID";
 
-  const majorCell = document.createElement('td');
-  majorCell.textContent = major;
-  majorCell.id="stdTableID";
+//   const majorCell = document.createElement('td');
+//   majorCell.textContent = major;
+//   majorCell.id="stdTableID";
 
-  // Add the new table cells to the new table row
-  const newRow = document.createElement('tr');
-  newRow.id="stdNewRowID";
+//   // Add the new table cells to the new table row
+//   const newRow = document.createElement('tr');
+//   newRow.id="stdNewRowID";
 
 
-  newRow.appendChild(fullNameCell);
-  newRow.appendChild(dateOfBirthCell);
-  newRow.appendChild(genderCell);
-  newRow.appendChild(phoneNumberCell);
-  newRow.appendChild(gradeCell);
-  newRow.appendChild(majorCell);
+//   newRow.appendChild(fullNameCell);
+//   newRow.appendChild(dateOfBirthCell);
+//   newRow.appendChild(genderCell);
+//   newRow.appendChild(phoneNumberCell);
+//   newRow.appendChild(gradeCell);
+//   newRow.appendChild(majorCell);
 
-  console.log(newRow);
-//   newRow.setAttribute("id", "stdTableID");
-  document.getElementById("stdTable").appendChild(newRow);
-// table.innerHTML += newRow;
-// console.log(document.getElementById("stdTable"));
-// Add the new table row to the table
-};
+//   console.log(newRow);
+// //   newRow.setAttribute("id", "stdTableID");
+//   document.getElementById("stdTable").appendChild(newRow);
+// // table.innerHTML += newRow;
+// // console.log(document.getElementById("stdTable"));
+// // Add the new table row to the table
+// };
 
 
 // failed try to save the data to local storage
 
-                // const formCards = document.querySelector('#formA');
+                const formCards = document.querySelector('#formA');
                 // var infoPg = document.getElementById('register');
-                // var formInfo = document.getElementById("stdTable");  
 
-                // function stdClick(event) {
-                // event.preventDefault();
+                function stdInfoClick(event) {
+                event.preventDefault();
+                console.log('hi');
 
-                // const formDataObj = new formDataObj(formInfo);
+                const fullName = document.querySelector('.fullNameTxt').value;
+                const dateOfBirth = document.querySelector('.dateTxt').value;
+                // const gender = document.querySelector('.checkboxTxt:checked').value;
+                const phoneNumber = document.querySelector('.phoneTxt').value;
+                const grade = document.querySelector('.gradeTxt').value;
+                const major = document.querySelector('#majorTxt').value;                
                 // const stdDataObj = object.formEntries(formDataObj);
-                // const stdDataObjJson = JSON.stringify(stdDataObj);
-                // localStorage.setItem('formDt', stdDataObjJson);
 
-                // // take me to the next page of my form to retrieve the data i collected 
-                // // window.location.href ="index2.html";
+                var stdDataObjJson = {
+                  constructor (FullName, DateofBirth, PhoneNumber, Grade, Grade ){
+                    this.FullName = '.fullName';
+                    this.DateofBirth = '.dateOfBirth';
+                    this.PhoneNumber = '.phoneNumber';
+                    this.Grade = '.grade';
+                    this.Major = '.major';
 
-                // const objJson = localStorage.getItem('formDt');
-                // const objJsonRet = JSON.parse(objJson);
+                  }
+                }
+                console.log('stdDataObjJson');
+               
+                const stdDataObjJson = JSON.stringify(stdDataObj);
+                localStorage.setItem('formDt', stdDataObjJson);
 
-                // for (key in objJsonRet) {
-                //     const markup = `
+                // take me to the next page of my form to retrieve the data i collected 
+                // window.location.href ="index2.html";
+
+                var objJson = localStorage.getItem('formDt');
+                const objJsonRet = JSON.parse(objJson);
+
+                for (key in objJsonRet) {
+                    const markup = `
                     
-                //         <div >
-                //             <div>${key}: ${objJsonRet[key]}</div>
-                //         </div>
+                        <div >
+                            <div>${key}: ${objJsonRet[key]}</div>
+                        </div>
 
-                //     `;
-                //     document.getElementById('stdCard').innerHTML += markup;
-                // }
-                // };
+                    `;
+                    document.getElementById('stdCard').innerHTML += markup;
+                    console.log(markup);
+                }
+                };
 
 
 
